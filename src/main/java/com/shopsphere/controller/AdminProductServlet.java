@@ -1,0 +1,7 @@
+package com.shopsphere.controller;
+import com.shopsphere.dao.ProductDAO;import com.shopsphere.model.Product;import jakarta.servlet.annotation.WebServlet;import jakarta.servlet.http.*;import jakarta.servlet.*;import java.io.IOException;
+@WebServlet("/admin/products")
+public class AdminProductServlet extends HttpServlet {
+ protected void doGet(HttpServletRequest q,HttpServletResponse r)throws ServletException,IOException{try{q.setAttribute("products",new ProductDAO().all(""));q.getRequestDispatcher("/admin/products.jsp").forward(q,r);}catch(Exception e){throw new ServletException(e);}}
+ protected void doPost(HttpServletRequest q,HttpServletResponse r)throws ServletException,IOException{try{String action=q.getParameter("action");ProductDAO d=new ProductDAO();if("delete".equals(action))d.delete(Integer.parseInt(q.getParameter("id")));else{Product p=new Product();p.setName(q.getParameter("name").trim());p.setBrand(q.getParameter("brand"));p.setDescription(q.getParameter("description"));p.setPrice(Double.parseDouble(q.getParameter("price")));p.setDiscount(Double.parseDouble(q.getParameter("discount")));p.setStock(Integer.parseInt(q.getParameter("stock")));p.setImageUrl(q.getParameter("imageUrl"));p.setCategoryId(Integer.parseInt(q.getParameter("categoryId")));if(p.getName().isBlank()||p.getPrice()<0||p.getDiscount()<0||p.getDiscount()>100||p.getStock()<0)throw new IllegalArgumentException("Invalid product values");d.save(p);}r.sendRedirect(q.getContextPath()+"/admin/products");}catch(Exception e){throw new ServletException(e);}}
+}

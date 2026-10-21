@@ -1,0 +1,7 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<nav class="navbar navbar-expand-lg navbar-dark shop-nav"><div class="container"><a class="navbar-brand fw-bold" href="${pageContext.request.contextPath}/">ShopSphere<span class="brand-dot">.</span></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav"><form class="d-flex mx-auto search-form" action="${pageContext.request.contextPath}/products"><input class="form-control" name="q" value="${param.q}" placeholder="Search products..." aria-label="Search"><button class="btn btn-light ms-2">Search</button></form>
+<ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/">Shop</a></li><li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/cart">Cart</a></li>
+<c:choose><c:when test="${not empty sessionScope.user}"><li class="nav-item"><span class="nav-link">Hi, ${sessionScope.user.name}</span></li><li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a></li></c:when><c:otherwise><li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a></li><li class="nav-item"><a class="btn btn-sm btn-warning ms-lg-2" href="${pageContext.request.contextPath}/register">Create account</a></li></c:otherwise></c:choose>
+</ul></div></div></nav>
