@@ -1,41 +1,99 @@
-# ShopSphere - Online Shopping Web Application
+ ShopSphere — Java E-Commerce Web Application
+ShopSphere is a web-based e-commerce application developed using Java, JSP, Servlets, Maven, and MySQL. It provides a platform for users to explore products, manage their shopping cart, place orders, and manage their accounts through a simple web interface.
 
-## About the Project
-ShopSphere is a Java-based online shopping web application. It allows users to browse products, manage their shopping cart, and place orders.
+✨ Features
+👤 User Features
+User Registration and Login
+Browse and Explore Products
+View Product Details
+Add Products to Cart
+Manage Wishlist
+Checkout and Order Management
+View Order Details and Order History
+Manage User Profile
+🛠️ Admin Features
+Manage Products
+View and Manage Users
+Access Sales Information
+💻 Technologies Used
+Technology	Purpose
+Java	Core application logic
+JSP	Dynamic web pages
+Servlets	Request handling and server-side processing
+HTML & CSS	Web page structure and styling
+MySQL	Database management
+Maven	Dependency and build management
+Apache Tomcat	Web application server
+Git & GitHub	Version control and source code hosting
+📂 Project Structure
+ShopSphere/
+├── database/
+│   └── shopsphere.sql
+├── src/
+│   └── main/
+│       └── webapp/
+│           ├── admin/
+│           ├── fragments/
+│           ├── WEB-INF/
+│           ├── index.jsp
+│           ├── products.jsp
+│           ├── cart.jsp
+│           ├── checkout.jsp
+│           ├── login.jsp
+│           └── register.jsp
+├── pom.xml
+├── .gitignore
+└── README.md
+⚙️ Prerequisites
+Before running the project, install:
 
-## Technologies Used
-- Java
-- JSP and Servlets
-- JDBC
-- MySQL
-- HTML and CSS
-- Maven
-- Apache Tomcat 11
+Java JDK
+Apache Maven
+Apache Tomcat
+MySQL Server
+MySQL Workbench (optional)
+An IDE such as Visual Studio Code or IntelliJ IDEA
+🚀 Installation and Setup
+1. Clone the Repository
+git clone https://github.com/nehamulanihub/ShopSphere.git
+2. Open the Project
+cd ShopSphere
+3. Set Up the Database
+Start your MySQL server.
+Open MySQL Workbench.
+Create a database using the name expected by the application's database configuration.
+Import the SQL file located at database/shopsphere.sql.
+Update the database connection settings in the project with your local MySQL username, password, database name, and port.
+Note: Keep your database credentials private. Do not upload passwords or other sensitive information to GitHub.
 
-## Features
-- User registration and login
-- Product listing and product details
-- Shopping cart management
-- Checkout functionality
-- Admin product management
-- MySQL database integration
+4. Build the Project
+Run the following command in the project directory:
 
-## Project Structure
-- `src/main/java` - Java source code
-- `src/main/webapp` - JSP pages and CSS
-- `database` - SQL database script
-- `pom.xml` - Maven configuration
+mvn clean package
+This command builds the application and generates a WAR file inside the target directory.
 
-## How to Run
-1. Install Java JDK, Maven, MySQL, and Apache Tomcat 11.
-2. Import `database/shopsphere.sql` into MySQL.
-3. Configure database credentials in the project.
-4. Build the project using `mvn clean package`.
-5. Deploy the generated WAR file to Tomcat.
-6. Start Tomcat and open the application in your browser.
+5. Deploy on Apache Tomcat
+Deploy the generated WAR file to your compatible Tomcat server and start Tomcat.
 
-## Author
-Tanvi Jaiman
+Open the application in your browser using the URL corresponding to your deployment configuration. For example:
 
-## Purpose
-This project was developed for learning Java web development.
+http://localhost:8080/ShopSphere/
+🗄️ Database
+The project includes an SQL dump at:
+
+database/shopsphere.sql
+
+It contains the database structure and sample data exported for project setup. Import it into your local MySQL environment before running the application.
+
+🎯 Project Objective
+The main objective of ShopSphere is to demonstrate the development of a Java-based e-commerce application using server-side technologies, database integration, and Maven-based project management.
+
+This project provides practical experience with web application development, CRUD operations, database connectivity, user workflows, and software deployment.
+
+🔮 Future Enhancements
+Online payment gateway integration
+Product search and advanced filtering
+Product reviews and ratings
+Improved security and input validation
+Responsive UI improvements
+Email notifications and order updates
