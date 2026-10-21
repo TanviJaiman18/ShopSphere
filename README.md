@@ -1,36 +1,45 @@
- ShopSphere — Java E-Commerce Web Application
-ShopSphere is a web-based e-commerce application developed using Java, JSP, Servlets, Maven, and MySQL. It provides a platform for users to explore products, manage their shopping cart, place orders, and manage their accounts through a simple web interface.
+# 🛍️ ShopSphere - Java E-Commerce Web Application
 
-✨ Features
-👤 User Features
-User Registration and Login
-Browse and Explore Products
-View Product Details
-Add Products to Cart
-Manage Wishlist
-Checkout and Order Management
-View Order Details and Order History
-Manage User Profile
-🛠️ Admin Features
-Manage Products
-View and Manage Users
-Access Sales Information
-💻 Technologies Used
-Technology	Purpose
-Java	Core application logic
-JSP	Dynamic web pages
-Servlets	Request handling and server-side processing
-HTML & CSS	Web page structure and styling
-MySQL	Database management
-Maven	Dependency and build management
-Apache Tomcat	Web application server
-Git & GitHub	Version control and source code hosting
-📂 Project Structure
+ShopSphere is a web-based e-commerce application developed using Java, JSP, Servlets, Maven, and MySQL. It allows users to browse products, manage their shopping cart, maintain a wishlist, and place orders through a simple web interface.
+
+## ✨ Features
+
+### User Features
+- User Registration and Login
+- Browse Products
+- View Product Details
+- Add Products to Cart
+- Manage Wishlist
+- Checkout and Order Management
+- View Order History
+- Manage User Profile
+
+### Admin Features
+- Manage Products
+- View and Manage Users
+- Access Sales Information
+
+## 💻 Technologies Used
+
+- **Java** - Application Logic
+- **JSP** - Dynamic Web Pages
+- **Servlets** - Request Handling
+- **HTML & CSS** - Frontend Design
+- **MySQL** - Database Management
+- **Maven** - Build and Dependency Management
+- **Apache Tomcat** - Web Application Server
+- **Git & GitHub** - Version Control
+
+## 📂 Project Structure
+
+```text
 ShopSphere/
 ├── database/
 │   └── shopsphere.sql
 ├── src/
 │   └── main/
+│       ├── java/
+│       ├── resources/
 │       └── webapp/
 │           ├── admin/
 │           ├── fragments/
@@ -44,56 +53,66 @@ ShopSphere/
 ├── pom.xml
 ├── .gitignore
 └── README.md
-⚙️ Prerequisites
-Before running the project, install:
+```
 
-Java JDK
-Apache Maven
-Apache Tomcat
-MySQL Server
-MySQL Workbench (optional)
-An IDE such as Visual Studio Code or IntelliJ IDEA
-🚀 Installation and Setup
-1. Clone the Repository
-git clone https://github.com/nehamulanihub/ShopSphere.git
-2. Open the Project
-cd ShopSphere
-3. Set Up the Database
-Start your MySQL server.
-Open MySQL Workbench.
-Create a database using the name expected by the application's database configuration.
-Import the SQL file located at database/shopsphere.sql.
-Update the database connection settings in the project with your local MySQL username, password, database name, and port.
-Note: Keep your database credentials private. Do not upload passwords or other sensitive information to GitHub.
+## ⚙️ Prerequisites
 
-4. Build the Project
-Run the following command in the project directory:
+- Java JDK
+- Apache Maven
+- Apache Tomcat
+- MySQL Server
+- MySQL Workbench (Optional)
+- Visual Studio Code or IntelliJ IDEA
 
-mvn clean package
-This command builds the application and generates a WAR file inside the target directory.
+## 🚀 Installation and Setup
 
-5. Deploy on Apache Tomcat
-Deploy the generated WAR file to your compatible Tomcat server and start Tomcat.
+1. Clone the repository:
 
-Open the application in your browser using the URL corresponding to your deployment configuration. For example:
+   ```bash
+   git clone https://github.com/TanviJaiman18/ShopSphere.git
+   ```
 
-http://localhost:8080/ShopSphere/
-🗄️ Database
-The project includes an SQL dump at:
+2. Open the project folder in your IDE.
 
-database/shopsphere.sql
+3. Start MySQL Server and import the `database/shopsphere.sql` file.
 
-It contains the database structure and sample data exported for project setup. Import it into your local MySQL environment before running the application.
+4. Configure the database connection using your local MySQL credentials.
 
-🎯 Project Objective
-The main objective of ShopSphere is to demonstrate the development of a Java-based e-commerce application using server-side technologies, database integration, and Maven-based project management.
+5. Build the project using Maven:
 
-This project provides practical experience with web application development, CRUD operations, database connectivity, user workflows, and software deployment.
+   ```bash
+   mvn clean package
+   ```
 
-🔮 Future Enhancements
-Online payment gateway integration
-Product search and advanced filtering
-Product reviews and ratings
-Improved security and input validation
-Responsive UI improvements
-Email notifications and order updates
+6. Deploy the generated WAR file to a compatible Apache Tomcat server.
+
+7. Start the server and access the application through your configured deployment.
+
+## 🗄️ Database
+
+The project includes an SQL file at `database/shopsphere.sql`, which contains the database structure and sample data for setting up the application.
+
+## 🎯 Project Objective
+
+The objective of ShopSphere is to demonstrate Java web application development, database integration, CRUD operations, and server-side programming using JSP, Servlets, and MySQL.
+
+## 🔮 Future Enhancements
+
+- Online Payment Integration
+- Product Search and Filtering
+- Product Reviews and Ratings
+- Improved Security
+- Responsive User Interface
+- Email Notifications
+
+## 👩‍💻 Author
+
+**Tanvi Jaiman**
+
+- GitHub: [TanviJaiman18](https://github.com/TanviJaiman18)
+- Repository: [ShopSphere](https://github.com/TanviJaiman18/ShopSphere)
+
+---
+
+⭐ If you find this project useful, consider giving it a star!
+
